@@ -82,9 +82,22 @@ def fit01(val, minVal, maxVal):
     if (val > 1): return maxVal
     return lerp(minVal, maxVal, val)
 
-def smoothstep(min, max, val):
+
+   
+def smooth(min, max, val):
+   '''
+   Other method (wikipedia):
    x = clamp((x - min)/(max - min), 0.0, 1.0);
    return x*x*(3 - 2*x)
+   '''
+   
+   if (val <= min) : return 0
+   if (val >= max) : return 1
+   t = max - min
+   if t < 1e-8 : return 0.5
+   t = (val - min) / t;
+   return t*t*(3.0 - 2.0*t)    
+    
     
 if __name__ == '__main__':
   print clamp(45,0,6)
