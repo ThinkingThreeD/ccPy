@@ -18,12 +18,13 @@ FUNCTIONS:
   
 '''
 
-def clamp(val, mini, maxi):
-    if val<mini:
-        val = mini
-    elif val > maxi:
-        val = maxi
-    return val
+def clamp(val, min, max):
+   if val < min:
+      return min
+   elif val > max:
+      return max
+   else:
+      return val
 
 
     
