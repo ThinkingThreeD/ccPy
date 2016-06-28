@@ -35,7 +35,21 @@ def clamp(val, min, max):
    '''
    return min if val < min else max if val > max else val
 
+def fit(val , oldmin , oldmax , newmin , newmax):
+    d = oldmax - oldmin
+    if (oldmin < oldmax):
+        if (val < oldmin): 
+            return newmin
+        if (val > oldmax): 
+            return newmax
+    else:
+        if (val < oldmax):
+            return newmax
+        if (val > oldmin):
+            return newmin
+    return newmin + (newmax-newmin)*(val-oldmin)/d
 
     
 if __name__ == '__main__':
   print clamp(45,0,6)
+  print fit(30 , 0 , 90 , 0 , 1)
