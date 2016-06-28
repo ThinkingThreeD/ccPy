@@ -37,4 +37,17 @@ T dot(const UT_Vector3T<T> &v1, const UT_Vector3T<T> &v2)
 return v1.x()*v2.x() + v1.y()*v2.y() + v1.z()*v2.z();
 }
 -------------------------------------------------------------------------
+--------------------      MULTIPLY BY SCALAR    ----------------------------------------
+-------------------------------------------------------------------------
+Maya SDK
+inline AwVector AwVector::operator*(double s) const
+{ return AwVector(x * s, y * s, z * s); }
+
+Houdini SDK
+template <typename T, typename S>
+inline
+UT_Vector3T<T> operator*(S scalar, const UT_Vector3T<T> &v)
+{
+ return UT_Vector3T<T>(v.x()*scalar, v.y()*scalar, v.z()*scalar);
+}
 
