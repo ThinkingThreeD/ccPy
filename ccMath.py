@@ -70,6 +70,13 @@ def fit(val , oldmin , oldmax , newmin , newmax):
             return newmin
     return newmin + (newmax-newmin)*(val-oldmin)/d
 
+def fit01(val, minVal, maxVal):
+   '''
+   Just like fit() but assumes value is already in the range 0 to 1.
+   '''
+    if (val < 0) : return minVal
+    if (val > 1): return maxVal
+    return lerp(minVal, maxVal, val)
     
 if __name__ == '__main__':
   print clamp(45,0,6)
