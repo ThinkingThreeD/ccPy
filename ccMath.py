@@ -11,7 +11,7 @@ COMMENTS:
    
 FUNCTIONS:
    clamp(val, min, max)           - Clamp value between min and max
-   smooth(min, max, a)            - Ease-in ease-out curve
+   smooth(min, max, val)            - Ease-in ease-out curve
    smooth(min, max, a, roll)      - Ease-in ease-out curve (with rolloff)
    lerp(v1, v2, t)                - Linear interpolation
    fit(val, omin,omax, nmin,nmax) - Map val in (oldmin,oldmax) to (newmin,newmax)
@@ -77,6 +77,10 @@ def fit01(val, minVal, maxVal):
     if (val < 0) : return minVal
     if (val > 1): return maxVal
     return lerp(minVal, maxVal, val)
+
+def smoothstep(min, max, val):
+   x = clamp((x - min)/(max - min), 0.0, 1.0);
+   return x*x*(3 - 2*x)
     
 if __name__ == '__main__':
   print clamp(45,0,6)
