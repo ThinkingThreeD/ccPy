@@ -1,0 +1,24 @@
+********************
+SOURCES MATH VECTOR3
+********************
+
+-------------------------------------------------------------------------
+LENGTH
+----------------------------------------------------------------------------
+Maya SDK
+  inline AwVector AwVector::crossProduct(const AwVector &r) const
+  { return AwVector(y*r.z - z*r.y, z*r.x - x*r.z, x*r.y - y*r.x); }
+.............................................................................. 
+Houdini SDK
+  template <typename T>
+  inline
+  UT_Vector3T<T> cross(const UT_Vector3T<T> &v1, const UT_Vector3T<T> &v2)
+  {
+   // compute the cross product:
+  return UT_Vector3T<T>(
+  v1.y()*v2.z() - v1.z()*v2.y(),
+  v1.z()*v2.x() - v1.x()*v2.z(),
+  v1.x()*v2.y() - v1.y()*v2.x()
+  );
+  }
+-----------------------------------------------------------------------
