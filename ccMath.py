@@ -1,5 +1,13 @@
 '''
-Personnal Math 3d Module
+Copyright (c) 2016 ThinkingTreeD
+
+Interpolation/Range:
+   clamp(val, min, max)           - Clamp value between min and max
+   smooth(min, max, a)          - Ease-in ease-out curve
+   smooth(min, max, a, roll)    - Ease-in ease-out curve (with rolloff)
+   Slerp(v1, v2, bias)           - Linear interpolation
+   fit(v, omin,omax, nmin,nmax) - Map v in (omin,omax) to (nmin,nmax)
+  
 '''
 
 def clamp(val, mini, maxi):
