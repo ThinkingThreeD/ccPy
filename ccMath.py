@@ -19,12 +19,21 @@ FUNCTIONS:
 '''
 
 def clamp(val, min, max):
+   '''
+   --------------------------------
    if val < min:
       return min
    elif val > max:
       return max
    else:
       return val
+   ---------------------------------
+   if val < min: return min
+   elif val > max: return max
+   else:return val
+   --------------------------------
+   '''
+   return min if val < min else max if val > max else val
 
 
     
