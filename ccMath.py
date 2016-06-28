@@ -15,8 +15,20 @@ FUNCTIONS:
    smooth(min, max, a, roll)      - Ease-in ease-out curve (with rolloff)
    lerp(v1, v2, t)                - Linear interpolation
    fit(val, omin,omax, nmin,nmax) - Map val in (oldmin,oldmax) to (newmin,newmax)
-  
+
+SOURCES:
+lerp
+    http://www.sidefx.com/docs/hdk15.0/_s_y_s___math_8h_source.html
+    Line 627
+fit
+    http://www.sidefx.com/docs/hdk15.0/_s_y_s___math_8h_source.html
+    Line 759
+fit01
+    http://www.sidefx.com/docs/hdk15.0/_s_y_s___math_8h_source.html
+    Line 797
+
 '''
+  
 def lerp(v1,v2, t):
     return v1 + (v2 - v1)*t 
     
