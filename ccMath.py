@@ -11,13 +11,16 @@ COMMENTS:
    
 FUNCTIONS:
    clamp(val, min, max)           - Clamp value between min and max
-   smooth(min, max, a)          - Ease-in ease-out curve
-   smooth(min, max, a, roll)    - Ease-in ease-out curve (with rolloff)
-   Slerp(v1, v2, bias)           - Linear interpolation
-   fit(v, omin,omax, nmin,nmax) - Map v in (omin,omax) to (nmin,nmax)
+   smooth(min, max, a)            - Ease-in ease-out curve
+   smooth(min, max, a, roll)      - Ease-in ease-out curve (with rolloff)
+   lerp(v1, v2, t)                - Linear interpolation
+   fit(val, omin,omax, nmin,nmax) - Map val in (oldmin,oldmax) to (newmin,newmax)
   
 '''
-
+def lerp(v1,v2, t):
+    return v1 + (v2 - v1)*t 
+    
+    
 def clamp(val, min, max):
    '''
    --------------------------------
