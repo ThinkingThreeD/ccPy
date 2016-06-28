@@ -29,7 +29,11 @@ fit
 fit01
    http://www.sidefx.com/docs/hdk15.0/_s_y_s___math_8h_source.html
    line 797
-
+   
+smooth
+   https://en.wikipedia.org/wiki/Smoothstep
+   http://www.sidefx.com/docs/hdk15.0/_s_y_s___math_8h_source.html
+   line 709
 '''
   
 def lerp(v1,v2, t):
