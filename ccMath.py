@@ -17,6 +17,8 @@ FUNCTIONS:
    fit(val, omin,omax, nmin,nmax) - Map val in (oldmin,oldmax) to (newmin,newmax)
 
 SOURCES:
+functions definitions
+   http://www.andynicholas.com/?p=1344
 lerp
    http://www.sidefx.com/docs/hdk15.0/_s_y_s___math_8h_source.html
    line 627
@@ -86,6 +88,8 @@ def fit01(val, minVal, maxVal):
    
 def smooth(min, max, val):
    '''
+   Outputs a smoothed value between 0 and 1 as value goes from minimum to maximum.
+   
    Other method (wikipedia):
    x = clamp((x - min)/(max - min), 0.0, 1.0);
    return x*x*(3 - 2*x)
