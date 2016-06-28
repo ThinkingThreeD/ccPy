@@ -54,6 +54,9 @@ def clamp(val, min, max):
    return min if val < min else max if val > max else val
 
 def fit(val , oldmin , oldmax , newmin , newmax):
+   '''
+   Remaps the value from the old range to the new range and clamps it
+   '''
     d = oldmax - oldmin
     if (oldmin < oldmax):
         if (val < oldmin): 
