@@ -1,7 +1,15 @@
 '''
-Copyright (c) 2016 ThinkingTreeD
-
-Interpolation/Range:
+COPYRIGHT:
+   2016 ThinkingTreeD
+   cyrill.calbac@gmail.com
+   0033715683949
+   France
+NAME: 
+   ccMath.py
+COMMENTS:
+   3d Math python module 
+   
+FUNCTIONS:
    clamp(val, min, max)           - Clamp value between min and max
    smooth(min, max, a)          - Ease-in ease-out curve
    smooth(min, max, a, roll)    - Ease-in ease-out curve (with rolloff)
