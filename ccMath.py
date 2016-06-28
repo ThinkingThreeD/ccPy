@@ -18,14 +18,17 @@ FUNCTIONS:
 
 SOURCES:
 lerp
-    http://www.sidefx.com/docs/hdk15.0/_s_y_s___math_8h_source.html
-    Line 627
+   http://www.sidefx.com/docs/hdk15.0/_s_y_s___math_8h_source.html
+   line 627
+clamp
+   http://www.sidefx.com/docs/hdk15.0/_math_8h_source.html
+   line 232
 fit
-    http://www.sidefx.com/docs/hdk15.0/_s_y_s___math_8h_source.html
-    Line 759
+   http://www.sidefx.com/docs/hdk15.0/_s_y_s___math_8h_source.html
+   line 759
 fit01
-    http://www.sidefx.com/docs/hdk15.0/_s_y_s___math_8h_source.html
-    Line 797
+   http://www.sidefx.com/docs/hdk15.0/_s_y_s___math_8h_source.html
+   line 797
 
 '''
   
