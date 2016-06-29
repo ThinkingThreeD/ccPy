@@ -102,12 +102,15 @@ def smooth(min, max, val):
    t = (val - min) / t;
    return t*t*(3.0 - 2.0*t)    
 
+'''
 def smooth01(min, max, val, roll):
     if (roll > 0):
         f = smooth(min, max, val)
         return 1-pow(1-f) if roll < 1 
         (fpreal64)1-SYSpow((fpreal64)1-f,(fpreal64)1/roll) : SYSpow(f, roll);
     return 1
+    
+'''
 
     
     
