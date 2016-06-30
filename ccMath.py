@@ -117,7 +117,19 @@ def smooth01(min, max, val, roll):
       return 1-(pow(1-f,1/roll)) if roll < 1 else pow(f,roll)
    return 1
 
-    
+def barycentric(v1, v2, v3, u, v)
+   '''
+   Barycentric coordinates do interpolation over the triangle specified by the
+   three vertices (v1, v2, v3): 
+   
+                     (u=0,v=1)              
+                         v2                 
+                         / \                  
+                        /   \                
+                       /     \               
+            (u=0,v=0) v0------v1 (u=1,v=0)
+   '''
+   return v1*(1-u-v) + v2*u + v3*v    
     
 if __name__ == '__main__':
   print clamp(45,0,6)
