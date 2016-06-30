@@ -127,7 +127,7 @@ def barycentric(v1, v2, v3, u, v)
                          / \                  
                         /   \                
                        /     \               
-            (u=0,v=0) v0------v1 (u=1,v=0)
+            (u=0,v=0) v0______v1 (u=1,v=0)
    '''
    return v1*(1-u-v) + v2*u + v3*v    
     
