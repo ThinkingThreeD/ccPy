@@ -37,9 +37,18 @@ smooth
    http://www.sidefx.com/docs/hdk15.0/_s_y_s___math_8h_source.html
    line 709
 '''
-  
+
+def equalZero(a, tol=0.00001):
+   '''
+   Is a equal to zero
+   '''
+   return a >= -tol and a <= tol
+    
 def lerp(v1,v2, t):
-    return v1 + (v2 - v1)*t 
+   '''
+   Linear interpolation
+   '''
+   return v1 + (v2 - v1)*t 
     
     
 def clamp(val, min, max):
@@ -63,26 +72,26 @@ def fit(val , oldmin , oldmax , newmin , newmax):
    '''
    Remaps the value from the old range to the new range and clamps it
    '''
-    d = oldmax - oldmin
-    if (oldmin < oldmax):
-        if (val < oldmin): 
-            return newmin
-        if (val > oldmax): 
-            return newmax
-    else:
-        if (val < oldmax):
-            return newmax
-        if (val > oldmin):
-            return newmin
-    return newmin + (newmax-newmin)*(val-oldmin)/d
+   d = oldmax - oldmin
+   if (oldmin < oldmax):
+      if (val < oldmin): 
+         return newmin
+      if (val > oldmax): 
+         return newmax
+   else:
+       if (val < oldmax):
+         return newmax
+       if (val > oldmin):
+         return newmin
+   return newmin + (newmax-newmin)*(val-oldmin)/d
 
 def fit01(val, minVal, maxVal):
    '''
    Just like fit() but assumes value is already in the range 0 to 1.
    '''
-    if (val < 0) : return minVal
-    if (val > 1): return maxVal
-    return lerp(minVal, maxVal, val)
+   if (val < 0) : return minVal
+   if (val > 1): return maxVal
+   return lerp(minVal, maxVal, val)
 
 
    
@@ -99,18 +108,14 @@ def smooth(min, max, val):
    if (val >= max) : return 1
    t = max - min
    if t < 1e-8 : return 0.5
-   t = (val - min) / t;
+   t = (val - min) / t
    return t*t*(3.0 - 2.0*t)    
 
-'''
 def smooth01(min, max, val, roll):
-    if (roll > 0):
-        f = smooth(min, max, val)
-        return 1-pow(1-f) if roll < 1 
-        (fpreal64)1-SYSpow((fpreal64)1-f,(fpreal64)1/roll) : SYSpow(f, roll);
-    return 1
-    
-'''
+   if (roll > 0):
+      f = smooth(min, max, val)
+      return 1-(pow(1-f,1/roll)) if roll < 1 else pow(f,roll)
+   return 1
 
     
     
